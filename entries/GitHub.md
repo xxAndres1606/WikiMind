@@ -1,0 +1,1 @@
+GitHub is a software where you can upload repositories.

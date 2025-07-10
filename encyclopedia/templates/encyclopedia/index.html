@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h1>All Pages</h1>
+
+    <ul>
+        {% for entry in entries %} <!-- Django syntax to iterate for every entry in entries -->
+            <li><a href = "/wiki/{{ entry }}">{{ entry }}</a></li> <!-- This creates a link with name entry for every entry in entries -->
+        {% endfor %}
+    </ul>
+
+{% endblock %}

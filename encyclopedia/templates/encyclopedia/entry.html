@@ -1,0 +1,13 @@
+{% extends "encyclopedia/layout.html" %} <!-- inherits html template from layout -->
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    <div>
+        {{ content|safe }} <!-- the word safe displays html content without escaping it, by default django tries escaping html content for security-->
+    </div>
+    <p>
+        <a href="{% url 'edit_page' title %}">Edit</a>
+    </p>
+{% endblock %}
